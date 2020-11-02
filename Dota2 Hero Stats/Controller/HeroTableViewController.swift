@@ -9,9 +9,12 @@ import UIKit
 
 class HeroTableViewController: UITableViewController {
 
+    var heroManager = HeroManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        heroManager.performRequest()
 
     }
 
