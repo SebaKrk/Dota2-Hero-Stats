@@ -10,5 +10,5 @@ import Foundation
 
 struct HeroData:Codable{
     let localized_name : String
-    let img : String
+//    let img : String
 }

@@ -11,7 +11,6 @@ protocol HeroManagerDelegate {
     func didUpdateHero (hero: HeroModel)
 }
 
-var hero = [HeroData]()
 
 struct HeroManager {
     
@@ -42,9 +41,11 @@ struct HeroManager {
     func parseJSON(appData: Data) {
         let decoder = JSONDecoder()
         do {
-            hero = try decoder.decode([HeroData].self, from: appData)
+            let hero = try decoder.decode([HeroData].self, from: appData)
             
-            print(hero)
+            print(hero[0].localized_name)
+            print(hero.count)
+            
 //            let decodedData = try decoder.decode(HeroData.self, from: appData)
 //            print(decodedData.hero)
 //            print(decodedData.hero[0].localized_name)
