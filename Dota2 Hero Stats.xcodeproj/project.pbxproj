@@ -15,6 +15,8 @@
 		93C163FC255074E500ECB6A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C163FA255074E500ECB6A7 /* LaunchScreen.storyboard */; };
 		93C16407255074E500ECB6A7 /* Dota2_Hero_StatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C16406255074E500ECB6A7 /* Dota2_Hero_StatsTests.swift */; };
 		93C16412255074E500ECB6A7 /* Dota2_Hero_StatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C16411255074E500ECB6A7 /* Dota2_Hero_StatsUITests.swift */; };
+		93C1642D2550766300ECB6A7 /* opendota.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 93C1642C2550766300ECB6A7 /* opendota.jpg */; };
+		93C1643325507B9100ECB6A7 /* pngwing.com.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C1643225507B9100ECB6A7 /* pngwing.com.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		93C1640D255074E500ECB6A7 /* Dota2 Hero StatsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dota2 Hero StatsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C16411255074E500ECB6A7 /* Dota2_Hero_StatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dota2_Hero_StatsUITests.swift; sourceTree = "<group>"; };
 		93C16413255074E500ECB6A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93C1642C2550766300ECB6A7 /* opendota.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = opendota.jpg; sourceTree = "<group>"; };
+		93C1643225507B9100ECB6A7 /* pngwing.com.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pngwing.com.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				93C163EE255074E100ECB6A7 /* Dota2 Hero Stats */,
+				93C1642B2550764D00ECB6A7 /* Images */,
 				93C16405255074E500ECB6A7 /* Dota2 Hero StatsTests */,
 				93C16410255074E500ECB6A7 /* Dota2 Hero StatsUITests */,
 				93C163ED255074E100ECB6A7 /* Products */,
@@ -101,8 +106,9 @@
 			children = (
 				93C163EF255074E100ECB6A7 /* AppDelegate.swift */,
 				93C163F1255074E100ECB6A7 /* SceneDelegate.swift */,
-				93C163F3255074E100ECB6A7 /* ViewController.swift */,
-				93C163F5255074E100ECB6A7 /* Main.storyboard */,
+				93C164272550753500ECB6A7 /* Model */,
+				93C16422255074F400ECB6A7 /* View */,
+				93C164232550752C00ECB6A7 /* Controller */,
 				93C163F8255074E500ECB6A7 /* Assets.xcassets */,
 				93C163FA255074E500ECB6A7 /* LaunchScreen.storyboard */,
 				93C163FD255074E500ECB6A7 /* Info.plist */,
@@ -126,6 +132,38 @@
 				93C16413255074E500ECB6A7 /* Info.plist */,
 			);
 			path = "Dota2 Hero StatsUITests";
+			sourceTree = "<group>";
+		};
+		93C16422255074F400ECB6A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93C163F5255074E100ECB6A7 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93C164232550752C00ECB6A7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				93C163F3255074E100ECB6A7 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		93C164272550753500ECB6A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		93C1642B2550764D00ECB6A7 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				93C1643225507B9100ECB6A7 /* pngwing.com.png */,
+				93C1642C2550766300ECB6A7 /* opendota.jpg */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +270,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				93C163FC255074E500ECB6A7 /* LaunchScreen.storyboard in Resources */,
+				93C1642D2550766300ECB6A7 /* opendota.jpg in Resources */,
+				93C1643325507B9100ECB6A7 /* pngwing.com.png in Resources */,
 				93C163F9255074E500ECB6A7 /* Assets.xcassets in Resources */,
 				93C163F7255074E100ECB6A7 /* Main.storyboard in Resources */,
 			);
