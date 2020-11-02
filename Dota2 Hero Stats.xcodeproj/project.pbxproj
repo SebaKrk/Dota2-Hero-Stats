@@ -17,6 +17,8 @@
 		93C16412255074E500ECB6A7 /* Dota2_Hero_StatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C16411255074E500ECB6A7 /* Dota2_Hero_StatsUITests.swift */; };
 		93C1642D2550766300ECB6A7 /* opendota.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 93C1642C2550766300ECB6A7 /* opendota.jpg */; };
 		93C1643325507B9100ECB6A7 /* pngwing.com.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C1643225507B9100ECB6A7 /* pngwing.com.png */; };
+		93C164382550803D00ECB6A7 /* HeroDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C164372550803D00ECB6A7 /* HeroDetailsViewController.swift */; };
+		93C164402550805800ECB6A7 /* HeroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1643F2550805800ECB6A7 /* HeroTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		93C16413255074E500ECB6A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93C1642C2550766300ECB6A7 /* opendota.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = opendota.jpg; sourceTree = "<group>"; };
 		93C1643225507B9100ECB6A7 /* pngwing.com.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pngwing.com.png; sourceTree = "<group>"; };
+		93C164372550803D00ECB6A7 /* HeroDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailsViewController.swift; sourceTree = "<group>"; };
+		93C1643F2550805800ECB6A7 /* HeroTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,8 @@
 		93C164232550752C00ECB6A7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				93C164372550803D00ECB6A7 /* HeroDetailsViewController.swift */,
+				93C1643F2550805800ECB6A7 /* HeroTableViewController.swift */,
 				93C163F3255074E100ECB6A7 /* ViewController.swift */,
 			);
 			path = Controller;
@@ -299,6 +305,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				93C163F4255074E100ECB6A7 /* ViewController.swift in Sources */,
+				93C164382550803D00ECB6A7 /* HeroDetailsViewController.swift in Sources */,
+				93C164402550805800ECB6A7 /* HeroTableViewController.swift in Sources */,
 				93C163F0255074E100ECB6A7 /* AppDelegate.swift in Sources */,
 				93C163F2255074E100ECB6A7 /* SceneDelegate.swift in Sources */,
 			);
