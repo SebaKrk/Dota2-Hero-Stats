@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct HeroData: Codable {
+
+struct HeroData:Codable{
     let localized_name : String
     let img : String
 }

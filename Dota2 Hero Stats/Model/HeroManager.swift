@@ -11,6 +11,8 @@ protocol HeroManagerDelegate {
     func didUpdateHero (hero: HeroModel)
 }
 
+var hero = [HeroData]()
+
 struct HeroManager {
     
     var delegate: HeroManagerDelegate?
@@ -24,9 +26,11 @@ struct HeroManager {
                     return
                 }
                 if let safeData = data {
-                    if let heroData = self.parseJSON(appData: safeData) {
-                        self.delegate?.didUpdateHero(hero: heroData)
-                    }
+//                    if let heroData = self.
+                    parseJSON(appData: safeData)
+//                    {
+//                        self.delegate?.didUpdateHero(hero: heroData)
+//                    }
                     
                 }
             }
@@ -35,24 +39,27 @@ struct HeroManager {
         
     }
     
-    func parseJSON(appData: Data) -> HeroModel? {
+    func parseJSON(appData: Data) {
         let decoder = JSONDecoder()
         do {
-            let decodedData = try decoder.decode(HeroData.self, from: appData)
+            hero = try decoder.decode([HeroData].self, from: appData)
             
-            print(decodedData.localized_name)
-            let name = decodedData.localized_name
-            print(decodedData.img)
-            let img = decodedData.img
+            print(hero)
+//            let decodedData = try decoder.decode(HeroData.self, from: appData)
+//            print(decodedData.hero)
+//            print(decodedData.hero[0].localized_name)
+//            let name = decodedData.hero[0].localized_name
             
-            let heroData = HeroModel(localized_name: name, img: img)
+//            print(decodedData.hero[0].img)
+//            let img = decodedData.hero[0].img
             
-            return heroData
+//            let heroData = HeroModel(localized_name: name, img: img)
+//            return heroData
             
             
         } catch {
             print("error masage in do/catch block: \(error)")
-            return nil
+//            return nil
         }
         
     }
