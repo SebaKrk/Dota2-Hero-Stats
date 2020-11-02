@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C9d-6s-mdo">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,34 +30,38 @@
                                     <action selector="heroStatsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Sg-YR-jrF"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngwing.com.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ol5-Ox-V9S">
-                                <rect key="frame" x="87" y="44" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dota 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5D-hU-tBc">
-                                <rect key="frame" x="46" y="180" width="322" height="48"/>
+                                <rect key="frame" x="46" y="249" width="322" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Bold" family="Noto Sans Myanmar" pointSize="47"/>
                                 <color key="textColor" red="0.20879733559999999" green="0.65475779769999998" blue="0.90592080350000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngwing.com.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ol5-Ox-V9S">
+                                <rect key="frame" x="87" y="88" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.20781964059999999" green="0.1999528408" blue="0.2039241195" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <navigationItem key="navigationItem" id="W3J-p0-u9J"/>
+                    <connections>
+                        <segue destination="Sc1-e6-W90" kind="show" identifier="HeroTable" id="Mzj-tV-hD1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-197.10144927536234" y="93.75"/>
+            <point key="canvasLocation" x="713.04347826086962" y="93.75"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Hero Table View Controller-->
         <scene sceneID="9QF-VQ-Y6v">
             <objects>
-                <tableViewController id="Sc1-e6-W90" sceneMemberID="viewController">
+                <tableViewController id="Sc1-e6-W90" customClass="HeroTableViewController" customModule="Dota2_Hero_Stats" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="v7v-DH-ear">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.20781964059999999" green="0.1999528408" blue="0.2039241195" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="w8q-Lt-u37">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
@@ -74,33 +77,54 @@
                             <outlet property="delegate" destination="Sc1-e6-W90" id="a6m-C4-RMs"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="XgM-tO-P9y"/>
+                    <connections>
+                        <segue destination="QZN-9A-Vfe" kind="show" identifier="DetaliHero" id="pVn-uX-WnG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLD-Ug-dBJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="675" y="110"/>
+            <point key="canvasLocation" x="1505.7971014492755" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Hero Details View Controller-->
         <scene sceneID="Blb-KW-3CF">
             <objects>
-                <viewController id="QZN-9A-Vfe" sceneMemberID="viewController">
+                <viewController id="QZN-9A-Vfe" customClass="HeroDetailsViewController" customModule="Dota2_Hero_Stats" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dkS-cO-Zwf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="vvo-UR-VaW"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.20781964059999999" green="0.1999528408" blue="0.2039241195" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <navigationItem key="navigationItem" id="rdt-5p-TKo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ec3-fP-p0Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1549" y="119"/>
+            <point key="canvasLocation" x="2460.8695652173915" y="93.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kt8-VI-sjc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C9d-6s-mdo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jlJ-Jo-3EJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.20781964059999999" green="0.1999528408" blue="0.2039241195" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VME-oz-cAk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TKG-gf-nRv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-197.10144927536234" y="93.75"/>
         </scene>
     </scenes>
     <resources>
         <image name="Rectangle" width="322" height="68"/>
         <image name="opendota.jpg" width="460.79998779296875" height="241.19999694824219"/>
         <image name="pngwing.com.png" width="1200" height="1200"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
