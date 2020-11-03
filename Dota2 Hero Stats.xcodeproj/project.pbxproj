@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9378D0B3255088E1001D0EAA /* HeroData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378D0B2255088E1001D0EAA /* HeroData.swift */; };
+		9378D0F42551CA48001D0EAA /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378D0F22551CA48001D0EAA /* HeroCell.swift */; };
+		9378D0F52551CA48001D0EAA /* HeroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9378D0F32551CA48001D0EAA /* HeroCell.xib */; };
 		93C163F0255074E100ECB6A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C163EF255074E100ECB6A7 /* AppDelegate.swift */; };
 		93C163F2255074E100ECB6A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C163F1255074E100ECB6A7 /* SceneDelegate.swift */; };
 		93C163F4255074E100ECB6A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C163F3255074E100ECB6A7 /* ViewController.swift */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		9378D0B2255088E1001D0EAA /* HeroData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroData.swift; sourceTree = "<group>"; };
+		9378D0F22551CA48001D0EAA /* HeroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
+		9378D0F32551CA48001D0EAA /* HeroCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCell.xib; sourceTree = "<group>"; };
 		93C163EC255074E100ECB6A7 /* Dota2 Hero Stats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dota2 Hero Stats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C163EF255074E100ECB6A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93C163F1255074E100ECB6A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				93C163F5255074E100ECB6A7 /* Main.storyboard */,
+				9378D0F22551CA48001D0EAA /* HeroCell.swift */,
+				9378D0F32551CA48001D0EAA /* HeroCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -279,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93C163FC255074E500ECB6A7 /* LaunchScreen.storyboard in Resources */,
+				9378D0F52551CA48001D0EAA /* HeroCell.xib in Resources */,
 				93C1642D2550766300ECB6A7 /* opendota.jpg in Resources */,
 				93C1643325507B9100ECB6A7 /* pngwing.com.png in Resources */,
 				93C163F9255074E500ECB6A7 /* Assets.xcassets in Resources */,
@@ -312,6 +319,7 @@
 				9378D0B3255088E1001D0EAA /* HeroData.swift in Sources */,
 				93C164402550805800ECB6A7 /* HeroTableViewController.swift in Sources */,
 				93C163F0255074E100ECB6A7 /* AppDelegate.swift in Sources */,
+				9378D0F42551CA48001D0EAA /* HeroCell.swift in Sources */,
 				93C163F2255074E100ECB6A7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
