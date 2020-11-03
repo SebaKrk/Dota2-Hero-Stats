@@ -15,5 +15,5 @@ struct HeroData:Codable{
     let base_mana : Int
     let base_attack_min : Int
     let base_str : Int
-    //    let img : String
+    let img : String
 }

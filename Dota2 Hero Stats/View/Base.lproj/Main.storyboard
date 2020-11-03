@@ -148,6 +148,7 @@
                     <navigationItem key="navigationItem" id="rdt-5p-TKo"/>
                     <connections>
                         <outlet property="attackTypeLabel" destination="INR-7w-oLQ" id="6LB-ux-RVj"/>
+                        <outlet property="baseAtackMinLabel" destination="xZS-ED-oky" id="5b6-ps-ZBe"/>
                         <outlet property="baseHealthLabel" destination="dXr-OF-k4E" id="v9f-tr-eMH"/>
                         <outlet property="baseManaLabel" destination="gUB-xb-xHr" id="XIs-EA-iJW"/>
                         <outlet property="baseStrLabel" destination="o3O-O5-fGF" id="hJm-Kh-U9m"/>
