@@ -11,6 +11,8 @@ class HeroDetailsViewController: UIViewController {
     
     
     @IBOutlet weak var heroImage: UIImageView!
+    @IBOutlet weak var heroIcon: UIImageView!
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var attackTypeLabel: UILabel!
     @IBOutlet weak var baseHealthLabel: UILabel!
@@ -35,6 +37,10 @@ class HeroDetailsViewController: UIViewController {
         let url = URL(string: urlString)
         heroImage.downloaded(from: url!)
         
+        
+        let urlString2 = "https://api.opendota.com" + (heroData?.icon)!
+        let url2 = URL(string: urlString2)
+        heroIcon.downloaded(from: url2!)
     }
     
     
