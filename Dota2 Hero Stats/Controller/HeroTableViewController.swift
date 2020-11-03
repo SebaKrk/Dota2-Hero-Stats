@@ -78,7 +78,7 @@ class HeroTableViewController: UITableViewController {
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
         cell.textLabel?.text = hero[indexPath.row].localized_name.capitalized
         
-        let urlString = "https://api.opendota.com" + hero[indexPath.row].icon //(heroData?.img)!
+        let urlString = "https://api.opendota.com" + hero[indexPath.row].icon
         let url = URL(string: urlString)
         
         cell.imageView?.downloaded(from: url!)
@@ -86,6 +86,8 @@ class HeroTableViewController: UITableViewController {
 
         return cell
     }
+    
+    
     
     // MARK: - Navigation
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
