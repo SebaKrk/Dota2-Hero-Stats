@@ -17,8 +17,9 @@ class HeroDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        nameLabel.text = heroData?.localized_name
+        
     }
     
 

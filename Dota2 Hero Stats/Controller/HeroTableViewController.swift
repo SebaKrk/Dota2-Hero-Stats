@@ -83,7 +83,11 @@ class HeroTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "DetaliHero", sender: self)
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? HeroDetailsViewController {
+            destination.heroData = hero[(tableView.indexPathForSelectedRow?.row)!]
+        }
+    }
     
 
 }
