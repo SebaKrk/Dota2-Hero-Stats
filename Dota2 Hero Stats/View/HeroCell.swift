@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HeroCell: UICollectionViewCell {
+class HeroCell: UITableViewCell {
     @IBOutlet weak var heroDataMessage: UIView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var heroImageView: UIImageView!

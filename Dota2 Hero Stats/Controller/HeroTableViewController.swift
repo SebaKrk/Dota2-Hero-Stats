@@ -77,14 +77,15 @@ class HeroTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil) as! HeroCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath)
+        as! HeroCell
+
         cell.label.text = hero[indexPath.row].localized_name.capitalized
         
         let urlString = "https://api.opendota.com" + hero[indexPath.row].icon
         let url = URL(string: urlString)
-        
-        cell.heroImageView.downloaded(from: url!)
+
+        cell.heroImageView?.downloaded(from: url!)
         
 
         return cell
