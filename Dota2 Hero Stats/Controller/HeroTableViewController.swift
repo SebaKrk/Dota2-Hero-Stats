@@ -13,27 +13,66 @@ class HeroTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        performRequest {
+            self.tableView.reloadData()
+        }
+        
+        tableView.delegate = self
+        tableView.dataSource = self
         
 
     }
+    
+    // MARK: - dowload JSON
+    
+    func performRequest(completed: @escaping() -> ())  {
+        
+        if let url = URL(string: "https://api.opendota.com/api/heroStats") {
+            let session = URLSession(configuration: .default)
+            let task = session.dataTask(with: url) { (data, response, error) in
+                if error != nil {
+                    print("error masage 1 : \(error!)")
+                }
+                if let safeData = data {
+                    self.parseJSON(appData: safeData)
+                    DispatchQueue.main.async {
+                        completed()
+                    }
+                }
+            }
+            task.resume()
+        }
+        
+    }
+    
+    func parseJSON(appData: Data) {
+        let decoder = JSONDecoder()
+        do {
+            hero = try decoder.decode([HeroData].self, from: appData)
+        } catch {
+            print("error masage2 : \(error)")
+        }
+    }
+    
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+      
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return  0
+    
+        return  hero.count
     }
 
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-//        cell.textLabel?.text = hero[indexPath.row].localized_name.capitalized
-//        return cell
-//    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+        cell.textLabel?.text = hero[indexPath.row].localized_name.capitalized
+        return cell
+    }
     
 
     /*
