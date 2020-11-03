@@ -11,9 +11,9 @@ class HeroDetailsViewController: UIViewController {
     
     
     @IBOutlet weak var heroImage: UIImageView!
-    
     @IBOutlet weak var nameLabel: UILabel!
     
+    var heroData : HeroData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
