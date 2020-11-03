@@ -23,6 +23,8 @@ class HeroTableViewController: UITableViewController {
        
         tableView.backgroundColor = UIColor.lightGray
         
+        tableView.register(UINib(nibName: "HeroCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
+        
 
     }
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -75,13 +77,14 @@ class HeroTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel?.text = hero[indexPath.row].localized_name.capitalized
+        
+        let cell = UITableViewCell(style: .default, reuseIdentifier: nil) as! HeroCell
+        cell.label.text = hero[indexPath.row].localized_name.capitalized
         
         let urlString = "https://api.opendota.com" + hero[indexPath.row].icon
         let url = URL(string: urlString)
         
-        cell.imageView?.downloaded(from: url!)
+        cell.heroImageView.downloaded(from: url!)
         
 
         return cell
