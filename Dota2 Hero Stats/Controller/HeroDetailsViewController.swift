@@ -31,6 +31,10 @@ class HeroDetailsViewController: UIViewController {
         baseAtackMinLabel.text = "Base min Atack: \((heroData?.base_attack_min)!)"
         baseStrLabel.text = " Base Strenght: \((heroData?.base_str)!)"
         
+        let urlString = "https://api.opendota.com" + (heroData?.img)!
+        let url = URL(string: urlString)
+        heroImage.downloaded(from: url!)
+        
     }
     
     
