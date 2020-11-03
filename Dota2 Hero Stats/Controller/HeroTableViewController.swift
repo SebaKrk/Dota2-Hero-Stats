@@ -9,17 +9,11 @@ import UIKit
 
 class HeroTableViewController: UITableViewController {
 
-    var heroManager = HeroManager()
     var hero = [HeroData]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        heroManager.performRequest()
-        tableView.reloadData()
-        
-        tableView.delegate = self
-        tableView.dataSource = self
 
     }
 
@@ -27,19 +21,19 @@ class HeroTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return hero.count
+        return  0
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel?.text = hero[indexPath.row].localized_name.capitalized
-        return cell
-    }
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+//        cell.textLabel?.text = hero[indexPath.row].localized_name.capitalized
+//        return cell
+//    }
     
 
     /*
