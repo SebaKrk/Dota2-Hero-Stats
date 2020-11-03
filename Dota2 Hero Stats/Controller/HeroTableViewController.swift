@@ -20,10 +20,16 @@ class HeroTableViewController: UITableViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+       
+        tableView.backgroundColor = UIColor.lightGray
         
 
     }
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.lightGray
+    }
     
+  
     // MARK: - dowload JSON
     
     func performRequest(completed: @escaping() -> ())  {
