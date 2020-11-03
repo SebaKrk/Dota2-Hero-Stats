@@ -14,7 +14,8 @@ class HeroCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        heroDataMessage.layer.cornerRadius = heroDataMessage.frame.size.height / 5
     }
 
 }
